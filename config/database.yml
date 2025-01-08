@@ -83,6 +83,7 @@ production:
     <<: *default
     database: ducsite_production
     username: ducsite
+    url: <%= ENV['DATABASE_URL'] %>
     password: <%= ENV["DUCSITE_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
