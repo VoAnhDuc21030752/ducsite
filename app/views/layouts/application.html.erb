@@ -23,6 +23,17 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  <nav class="menu">
+    <% if !user_signed_in? %>
+      <p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= button_to "Đăng xuất", destroy_user_session_path, method: :delete %>
+    <% end %>
+    <%= link_to "Home", root_path %>
+  </nav>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+</body>
 </html>
