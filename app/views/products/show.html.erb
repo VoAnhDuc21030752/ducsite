@@ -1,8 +1,25 @@
-<%= image_tag @product.featured_image if @product.featured_image.attached? %>
-<h1><%= @product.name %></h1>
-<%= render "inventory", product: @product %>
+<div class="product-page-container">
+  <!-- Khung sản phẩm -->
+  <div class="product-card">
+    <!-- Hình ảnh sản phẩm -->
+    <div class="product-image">
+      <%= image_tag @product.featured_image if @product.featured_image.attached? %>
+    </div>
 
-<%= @product.description %>
-<%= link_to "Back", products_path %>
-<%= link_to "Edit", edit_product_path(@product) %>
-<%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+    <!-- Thông tin sản phẩm -->
+    <div class="product-info">
+      <h1 class="product-name"><%= @product.name %></h1>
+      <div class="product-inventory">
+        <%= render "inventory", product: @product %>
+      </div>
+      <p class="product-description"><%= @product.description %></p>
+    </div>
+
+    <!-- Hành động -->
+    <div class="product-actions">
+      <%= link_to "Back", products_path, class: "btn btn-secondary" %>
+      <%= link_to "Edit", edit_product_path(@product), class: "btn btn-primary" %>
+      <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>
