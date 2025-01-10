@@ -67,4 +67,114 @@
   .new-product-link:hover {
     background-color: #0056b3;
   }
+  .actions a,
+.actions button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.actions a {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.actions a:hover {
+  background-color: #0056b3;
+}
+
+.actions button {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.actions button:hover {
+  background-color: #b02a37;
+}
+
+.actions a:active,
+.actions button:active {
+  transform: scale(0.95);
+}
+h2 {
+    font-size: 2rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
   
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .field input[type="email"],
+  .field input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .field input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  .actions {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .actions input[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actions input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .devise-links {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .devise-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .devise-links a:hover {
+    text-decoration: underline;
+  }
