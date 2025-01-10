@@ -8,3 +8,63 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  #products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+  
+  #products div {
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  #products div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .new-product-link {
+    display: block;
+    margin: 0 auto 2rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .new-product-link:hover {
+    background-color: #0056b3;
+  }
+  
