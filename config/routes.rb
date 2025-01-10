@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   get "products/index"
-  resources :products
+  resources :products do
+    resources :subscribers, only: [ :create ]
+  end
   root "products#index"
 
   get "/products", to: "products#index"
